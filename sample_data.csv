@@ -1,0 +1,6 @@
+date,day_of_week,time_of_day,time_slot,stop_name,distance_from_origin,weather,temperature,traffic_level,is_holiday,is_festival,is_special_event,historical_crowd,passenger_count
+2025-10-01,Wednesday,08:00,peak,Silk Board,0,cloudy,24,8,0,0,0,60,80
+2025-10-01,Wednesday,08:30,peak,Agara,3,cloudy,24,8,0,0,0,50,70
+2025-10-02,Thursday,09:00,peak,Marathahalli,8,sunny,26,7,0,0,0,40,50
+2025-10-25,Saturday,18:00,evening,Hebbal,25,rainy,22,6,0,1,0,30,55
+2025-11-04,Tuesday,08:00,peak,Silk Board,0,sunny,27,9,1,0,0,70,100

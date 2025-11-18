@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f5f8ff;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* ----- CARD ----- */
+
+.card {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #1a237e;
+}
+
+
+/* ----- FORM ----- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 4px rgba(26, 115, 232, 0.4);
+}
+
+
+/* BUTTON */
+
+button {
+  background: #1a73e8;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0f59c7;
+}
+
+button:disabled {
+  background: #90caf9;
+  cursor: not-allowed;
+}
+
+
+/* ----- HEATMAP ----- */
+
+.heatmap-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.heatmap-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
+
+.heatmap-table th,
+.heatmap-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* COLORS BASED ON CROWD LEVEL */
+.crowd-low {
+  background: #d0f0c0;
+}
+
+.crowd-medium {
+  background: #ffe9a8;
+}
+
+.crowd-high {
+  background: #ffb3b3;
+}
+
+.heatmap-table th {
+  background: #1a237e;
+  color: white;
+}
