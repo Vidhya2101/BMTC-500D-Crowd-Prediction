@@ -1,7 +1,15 @@
 // frontend/src/components/PredictionForm.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import { predict } from '../api';
 import { format } from 'date-fns';
+
+const parseWeatherCode = (code) => {
+  if (code === 0) return "Clear";
+  if (code <= 3) return "Cloudy";
+  if (code >= 50) return "Rainy";
+  return "Clear";
+};
+
 
 const STOPS = ['Silk Board','Agara','Marathahalli','Tin Factory','Hebbal'];
 
@@ -15,12 +23,38 @@ export default function PredictionForm() {
   const [date, setDate] = useState(format(new Date(), 'yyyy-MM-dd'));
   const [time, setTime] = useState('08:00');
   const [stop, setStop] = useState(STOPS[0]);
-  const [weather, setWeather] = useState('sunny');
-  const [traffic, setTraffic] = useState(7);
-  const [historical, setHistorical] = useState(50);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null); // <--- stores backend response
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+  fetch("https://api.open-meteo.com/v1/forecast?latitude=12.9716&longitude=77.5946&current=temperature_2m,weather_code")
+    .then(res => res.json())
+    .then(data => {
+      if (data.current) {
+        setTemperature(data.current.temperature_2m);
+        setWeather(parseWeatherCode(data.current.weather_code));
+      }
+    });
+}, []);
+
+  useEffect(() => {
+  const TKEY = "YOUR_TOMTOM_API_KEY";
+
+  fetch(`https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?point=12.9716,77.5946&key=${TKEY}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data?.flowSegmentData?.currentSpeed && data?.flowSegmentData?.freeFlowSpeed) {
+        const trafficRatio = data.flowSegmentData.freeFlowSpeed / data.flowSegmentData.currentSpeed;
+        
+        if (trafficRatio > 2) setTrafficLevel(3);
+        else if (trafficRatio > 1.2) setTrafficLevel(2);
+        else setTrafficLevel(1);
+      }
+    });
+}, []);
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,20 +70,14 @@ export default function PredictionForm() {
       const distance_map = { 'Silk Board': 0, 'Agara': 3, 'Marathahalli': 8, 'Tin Factory': 12, 'Hebbal': 25 };
 
       const payload = {
-        date,
-        day_of_week,
-        time_of_day: time,
-        time_slot,
-        stop_name: stop,
-        distance_from_origin: distance_map[stop] || 0,
-        weather,
-        temperature: 25,
-        traffic_level: Number(traffic),
-        is_holiday: 0,
-        is_festival: 0,
-        is_special_event: 0,
-        historical_crowd: Number(historical)
-      };
+  date,
+  day_of_week,
+  time_of_day,
+  time_slot,
+  stop_name,
+  distance_from_origin
+};
+
 
       // call backend
       const data = await predict(payload);
@@ -99,24 +127,7 @@ export default function PredictionForm() {
           </select>
         </label>
 
-        <label>
-          Weather
-          <select value={weather} onChange={(e) => setWeather(e.target.value)}>
-            <option>sunny</option>
-            <option>cloudy</option>
-            <option>rainy</option>
-          </select>
-        </label>
 
-        <label>
-          Traffic level (1-10)
-          <input type="number" min="1" max="10" value={traffic} onChange={(e)=>setTraffic(e.target.value)} />
-        </label>
-
-        <label>
-          Historical avg passengers
-          <input type="number" min="0" value={historical} onChange={(e)=>setHistorical(e.target.value)} />
-        </label>
 
         <div className="actions">
           <button type="submit" disabled={loading}>{loading ? 'Predicting...' : 'Predict'}</button>

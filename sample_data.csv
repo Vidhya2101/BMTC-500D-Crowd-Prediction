@@ -1,6 +1,87 @@
 date,day_of_week,time_of_day,time_slot,stop_name,distance_from_origin,weather,temperature,traffic_level,is_holiday,is_festival,is_special_event,historical_crowd,passenger_count
-2025-10-01,Wednesday,08:00,peak,Silk Board,0,cloudy,24,8,0,0,0,60,80
-2025-10-01,Wednesday,08:30,peak,Agara,3,cloudy,24,8,0,0,0,50,70
-2025-10-02,Thursday,09:00,peak,Marathahalli,8,sunny,26,7,0,0,0,40,50
-2025-10-25,Saturday,18:00,evening,Hebbal,25,rainy,22,6,0,1,0,30,55
-2025-11-04,Tuesday,08:00,peak,Silk Board,0,sunny,27,9,1,0,0,70,100
+2025-01-01,Wednesday,08:00,morning_slow,Silk Board,0,sunny,24,7,1,0,0,65,78
+2025-01-01,Wednesday,09:00,morning_peak,Agara,2,sunny,25,8,1,0,0,72,89
+2025-01-01,Wednesday,10:00,morning_offpeak,HSR Layout,4,cloudy,24,6,1,0,0,54,63
+2025-01-02,Thursday,08:00,morning_slow,Silk Board,0,sunny,25,7,0,0,0,61,74
+2025-01-02,Thursday,09:00,morning_peak,Agara,2,sunny,26,8,0,0,0,70,85
+2025-01-02,Thursday,18:00,evening_peak,Koramangala,6,cloudy,22,8,0,0,0,88,105
+2025-01-02,Thursday,19:00,evening_peak,Domlur,10,cloudy,22,9,0,0,0,95,117
+2025-01-03,Friday,08:00,morning_slow,Silk Board,0,sunny,24,7,0,0,0,63,75
+2025-01-03,Friday,09:00,morning_peak,Agara,2,sunny,25,8,0,0,0,69,82
+2025-01-03,Friday,18:00,evening_peak,Koramangala,6,rainy,21,9,0,0,0,92,120
+2025-01-03,Friday,19:00,evening_peak,Domlur,10,rainy,21,9,0,0,0,97,125
+2025-01-04,Saturday,11:00,midday,HSR Layout,4,cloudy,26,5,0,0,0,48,55
+2025-01-04,Saturday,12:00,midday,Koramangala,6,cloudy,27,5,0,0,0,52,61
+2025-01-04,Saturday,13:00,midday,Domlur,10,sunny,28,4,0,0,0,45,53
+2025-01-05,Sunday,10:00,morning_offpeak,HSR Layout,4,sunny,27,3,0,0,0,32,40
+2025-01-05,Sunday,11:00,midday,Koramangala,6,sunny,28,3,0,0,0,35,43
+2025-01-05,Sunday,12:00,midday,Domlur,10,sunny,29,3,0,0,0,30,37
+2025-01-06,Monday,08:00,morning_slow,Silk Board,0,cloudy,23,7,0,0,0,62,73
+2025-01-06,Monday,09:00,morning_peak,Agara,2,cloudy,24,8,0,0,0,75,88
+2025-01-06,Monday,10:00,morning_offpeak,HSR Layout,4,sunny,26,6,0,0,0,58,67
+2025-01-06,Monday,18:00,evening_peak,Koramangala,6,cloudy,22,8,0,0,0,90,108
+2025-01-06,Monday,19:00,evening_peak,Domlur,10,cloudy,22,9,0,0,0,97,115
+2025-01-07,Tuesday,08:00,morning_slow,Silk Board,0,sunny,24,7,0,0,0,65,77
+2025-01-07,Tuesday,09:00,morning_peak,Agara,2,sunny,25,8,0,0,0,77,92
+2025-01-07,Tuesday,18:00,evening_peak,Koramangala,6,rainy,21,8,0,0,0,94,118
+2025-01-07,Tuesday,19:00,evening_peak,Domlur,10,rainy,21,9,0,0,0,103,128
+2025-01-08,Wednesday,10:00,morning_offpeak,HSR Layout,4,cloudy,25,6,0,0,0,50,60
+2025-01-08,Wednesday,11:00,midday,Koramangala,6,cloudy,26,5,0,0,0,47,55
+2025-01-08,Wednesday,12:00,midday,Domlur,10,sunny,27,4,0,0,0,44,51
+2025-01-09,Thursday,08:00,morning_slow,Silk Board,0,sunny,24,7,0,0,0,61,74
+2025-01-09,Thursday,09:00,morning_peak,Agara,2,sunny,25,8,0,0,0,73,88
+2025-01-09,Thursday,18:00,evening_peak,Koramangala,6,cloudy,22,8,0,0,0,92,110
+2025-01-09,Thursday,19:00,evening_peak,Domlur,10,cloudy,22,9,0,0,0,99,118
+2025-01-10,Friday,08:00,morning_slow,Silk Board,0,cloudy,23,7,0,0,0,60,72
+2025-01-10,Friday,09:00,morning_peak,Agara,2,cloudy,24,8,0,0,0,71,86
+2025-01-10,Friday,18:00,evening_peak,Koramangala,6,rainy,21,9,0,0,0,95,121
+2025-01-10,Friday,19:00,evening_peak,Domlur,10,rainy,21,9,0,0,0,104,130
+2025-01-11,Saturday,10:00,morning_offpeak,HSR Layout,4,sunny,27,5,0,0,0,49,57
+2025-01-11,Saturday,11:00,midday,Koramangala,6,sunny,28,4,0,0,0,45,53
+2025-01-20,Monday,Evening,18:00-18:15,HSR Layout,8,Clear,28,3,0,0,0,140,148
+2025-01-20,Monday,Night,20:00-20:15,Madiwala,10,Clear,26,2,0,0,0,110,118
+2025-01-21,Tuesday,Peak,09:00-09:15,Silk Board,12,Cloudy,24,3,0,0,0,170,182
+2025-01-21,Tuesday,Off-peak,11:00-11:15,Agara,5,Cloudy,25,1,0,0,0,90,96
+2025-01-21,Tuesday,Peak,17:00-17:15,HSR Layout,8,Clear,29,3,0,0,0,150,160
+2025-01-22,Wednesday,Peak,08:30-08:45,Koramangala,4,Rainy,23,3,0,0,0,160,172
+2025-01-22,Wednesday,Off-peak,10:00-10:15,Silk Board,12,Rainy,22,2,0,0,0,100,110
+2025-01-22,Wednesday,Evening,19:00-19:15,Agara,5,Clear,27,3,0,0,0,120,132
+2025-01-23,Thursday,Peak,09:00-09:15,HSR Layout,8,Cloudy,25,3,0,0,0,155,166
+2025-01-23,Thursday,Evening,18:00-18:15,Koramangala,4,Clear,29,3,0,0,0,130,140
+2025-01-24,Friday,Peak,08:45-09:00,Silk Board,12,Clear,27,3,0,0,0,170,185
+2025-01-24,Friday,Off-peak,11:15-11:30,Agara,5,Cloudy,26,1,0,0,0,95,102
+2025-01-24,Friday,Night,20:30-20:45,Madiwala,10,Clear,25,1,0,0,0,105,114
+2025-01-25,Saturday,Peak,10:00-10:15,HSR Layout,8,Clear,28,2,0,0,0,130,140
+2025-01-25,Saturday,Evening,19:00-19:15,Koramangala,4,Cloudy,26,2,0,0,0,125,134
+2025-01-26,Sunday,Morning,09:00-09:15,Agara,5,Clear,27,1,1,0,0,80,93
+2025-01-26,Sunday,Evening,18:00-18:15,Silk Board,12,Clear,28,2,1,0,0,100,113
+2025-01-27,Monday,Peak,08:00-08:15,Koramangala,4,Rainy,23,3,0,0,0,165,178
+2025-01-27,Monday,Off-peak,11:30-11:45,HSR Layout,8,Rainy,22,1,0,0,0,85,92
+2025-01-27,Monday,Night,20:00-20:15,Madiwala,10,Cloudy,24,2,0,0,0,115,126
+2025-01-28,Tuesday,Peak,09:15-09:30,Silk Board,12,Clear,27,3,0,0,0,180,192
+2025-01-28,Tuesday,Evening,18:15-18:30,Agara,5,Clear,28,3,0,0,0,125,135
+2025-01-29,Wednesday,Peak,08:30-08:45,HSR Layout,8,Cloudy,26,3,0,0,0,160,172
+2025-01-29,Wednesday,Off-peak,11:30-11:45,Koramangala,4,Clear,29,1,0,0,0,90,98
+2025-01-29,Wednesday,Night,21:00-21:15,Silk Board,12,Clear,27,1,0,0,0,105,114
+2025-01-30,Thursday,Peak,09:00-09:15,Agara,5,Clear,27,3,0,0,0,145,155
+2025-01-30,Thursday,Evening,18:00-18:15,Madiwala,10,Cloudy,25,3,0,0,0,130,142
+2025-01-31,Friday,Peak,08:45-09:00,Koramangala,4,Rainy,23,3,0,0,0,170,185
+2025-01-31,Friday,Off-peak,11:30-11:45,HSR Layout,8,Rainy,22,1,0,0,0,85,93
+2025-01-31,Friday,Night,20:00-20:15,Agara,5,Clear,27,1,0,0,0,105,116
+2025-02-01,Saturday,Morning,10:00-10:15,Silk Board,12,Clear,28,2,0,0,0,120,130
+2025-02-01,Saturday,Evening,19:00-19:15,Koramangala,4,Clear,29,2,0,0,0,115,123
+2025-02-02,Sunday,Morning,09:00-09:15,HSR Layout,8,Clear,29,1,0,0,0,88,97
+2025-02-02,Sunday,Evening,18:00-18:15,Madiwala,10,Clear,28,2,0,0,0,102,115
+2025-02-03,Monday,Peak,08:30-08:45,Agara,5,Rainy,23,3,0,0,0,150,162
+2025-02-03,Monday,Off-peak,11:30-11:45,Silk Board,12,Rainy,22,1,0,0,0,95,104
+2025-02-03,Monday,Night,21:00-21:15,Koramangala,4,Cloudy,25,1,0,0,0,110,122
+2025-02-04,Tuesday,Peak,09:00-09:15,HSR Layout,8,Cloudy,26,3,0,0,0,165,178
+2025-02-04,Tuesday,Evening,18:00-18:15,Madiwala,10,Clear,27,3,0,0,0,140,152
+2025-02-05,Wednesday,Peak,08:45-09:00,Agara,5,Clear,28,3,0,0,0,150,161
+2025-02-05,Wednesday,Off-peak,10:30-10:45,Koramangala,4,Clear,29,1,0,0,0,92,101
+2025-02-05,Wednesday,Night,20:30-20:45,Silk Board,12,Clear,27,1,0,0,0,110,118
+2025-02-06,Thursday,Peak,09:00-09:15,Madiwala,10,Cloudy,25,3,0,0,0,160,171
+2025-02-06,Thursday,Evening,18:00-18:15,HSR Layout,8,Clear,28,3,0,0,0,135,148
+2025-02-07,Friday,Peak,08:45-09:00,Agara,5,Clear,27,3,0,0,0,155,168
+2025-02-07,Friday,Off-peak,11:00-11:15,Koramangala,4,Cloudy,26,1,0,0,0,95,102
+2025-02-07,Friday,Night,21:00-21:15,Silk Board,12,Clear,27,1,0,0,0,108,121
